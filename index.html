@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Form Design</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+    <!-- Start designing form -->
+    <div id="form_container">
+        <div class="form-heading">
+            <h1>Identity verification</h1>
+        </div>
+        <div class="form-body">
+            <form id="contact-form" action="mail.php" method="POST">
+                <div class="form-instractions">
+                    <p class="mb-20">Therefore, please upload your ID (Passport or National ID) using the form below.</p>
+                    <p>ID Requirements:</p>
+                    <ul>
+                        <li>1. Your ID must be valid and issued by your national or regional government (not an employer or school).</li>
+                        <li>3. Do not edit the image in any way, including cropping.</li>
+                        <li>4. When you take the photo of your ID, make sure the photo is clear and close enough to read without cropping or editing.</li>
+                    </ul>
+                </div>
+    
+                <label for="files">Upload a photo of your ID <span>*</span></label>
+                <div class="upload-box">
+                    <div class="box-info">
+                        <div class="upload-icon">
+                            <i class="fa fa-duotone fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3>Browse Files</h3>
+                        <p>Drag and drop files here</p>
+                        <input name="id" type="file" hidden>
+                    </div>
+                </div>
+        
+                <div class="form-instractions">
+                    <p class="mb-20">Confirm your identity with a photo of yourself holding your ID that you have uploaded on the first step.</p>
+                    <p>Requirements:</p>
+                    <ul>
+                        <li>Take the photo in a room with enough light</li>
+                        <li>Select the highest photo quality on the device you use to take the photo</li>
+                        <li>3. Hold up the document next to your face, like in the image below</li>
+                        <li>4. Make sure both your face and ID are clear on the photo — nothing on the ID can be covered or censored </li>
+                    </ul>
+                    <div class="instraction-img">
+                        <img src="img/instraction-nid.svg" alt="id card">
+                    </div>
+                    <p class="mb-60">Our algorithm wiill compare your face in the selfie to the document photo. </p>
+    
+                    <label for="files">Upload a selfie with your ID<span> *</span></label>
+                    <div class="upload-box">
+                        <div class="box-info">
+                            <div class="upload-icon">
+                                <i class="fa fa-duotone fa-cloud-arrow-up"></i>
+                            </div>
+                            <h3>Browse Files</h3>
+                            <p>Drag and drop files here</p>
+                            <input name="selfie" type="file" hidden>
+                        </div>
+                    </div>
+    
+                    <div class="form-footer">
+                        <div class="submit-button">
+                            <input type="submit" value="Submit">
+                        </div>
+                        <p>Powered by <span>Adex Community</span></p>
+                    </div>
+                </div>
+            </form>
+            <p class="form-message"></p>
+        </div>
+    </div>
+    <!-- end designing form -->
+
+
+    <script src="js/upload.js"></script>
+    <script src="js/ajax.js"></script>
+</body>
+</html>
